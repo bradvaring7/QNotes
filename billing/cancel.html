@@ -1,54 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cancellation Requests</title>
-  <link rel="stylesheet" href="../css/style-notes.css" />
+  <title>Cancellation Requests - QNotes</title>
+  <link rel="stylesheet" href="../css/styles-notes.css" />
 </head>
+
 <body>
-  <h1>Cancellation Requests</h1>
-  <p class="category-line">
-    <a href="index.html">BILLING</a> | <a href="#">KB: Cancel Requests</a>
-  </p>
+  <div class="sidebar">
+    <button class="toggle-btn">‹</button>
+    <div class="sidebar-content"> <!-- Move logo inside this div -->
+      <img src="../assets/Picture2.png" alt="QNotes Logo" class="logo">
+      <h2>Categories</h2>
+      <a class="sidebar-link" href="../billing/index.html">Billing, Cancel</a>
+      <a class="sidebar-link" href="../value/index.html">Building Value</a>
+      <h2>Billing</h2>
+      <a class="sidebar-link" href="cancel.html">Cancel</a>
+      <a class="sidebar-link" href="checks.html">Checks</a>
+      <a class="sidebar-link" href="discounts.html">Discounts</a>
+      <a class="sidebar-link" href="refunds.html">Refunds</a>
+      <a class="sidebar-link" href="billing-notes.html">Billing Notes</a>
+    </div>
+  </div>
+  <div class="main">
+    <h1>Cancellation Requests</h1>
+    <p class="category-line">
+      <a href="index.html">BILLING</a> | <a href="#">KB: Cancel Requests</a>
+    </p>
+    <h2>1st - Empathize</h2>
+    <p><b>When a customer wants to cancel, it’s crucial to first empathize with their situation. Use phrases that
+      acknowledge their feelings and concerns. Here are some examples:</b></p>
+    <p><b>Still Seeing Pests: </b><i>"I understand why you're looking to make changes. I would feel the same way if If I were paying for something
+        that I didn't feel was working. I'm sorry if you haven't seen results from our services yet and will do
+        everything I can on all this call to make it right for!"</i></p>
+    <p><b>Pricing Concerns: </b><i>"I appreciate you for sharing your price concerns with me. It seems like everything just keeps getting more
+        and more expensive these days. The last thing we want is to be a financial burden for you!"</i></p>
+    <p><b>Scheduling Issue: </b><i>"I can see why you want to make these changes. Sounds like you are just wanting to get your house
+        taken care of, and I'm sorry if there have been conflicts that have got in the way of that."</i></p>
+    <p><b>Pro/Employee Experience: </b><i>"Thank you for reaching out and sharing what happened. I'm documenting everything to ensure the right people
+        are in the loop so we can look into this further. I'm so sorry for the experience you had, and I completely
+        understand why you want to explore other options moving forward."</i></p>
+    <h2>2nd - Discovery Questions</h2>
+    <h3>Still Seeing Pests</h3>
+    <ul>
+      <li>What pests are you still seeing?</li>
+      <li>How long have you been seeing them?</li>
+      <li>Have you heard of or used our free reservices yet?</li>
+    </ul>
+    <h3>Price Concerns</h3>
+    <ul>
+      <li>Are there ways our treatments could offer more value for you?</li>
+      <li>Are you exploring other options, or just looking to manage expenses?</li>
+    </ul>
+    <h3>Scheduling Issues</h3>
+    <ul>
+      <li>What were your expectations for our service timing?</li>
+      <li>What days work best for future appointments?</li>
+      <li>Is this the first time this kind of scheduling issue has happened?</li>
+    </ul>
+    <h3>Pro-Employee Experience</h3>
+    <ul>
+      <li>Can you explain what happened?</li>
+      <li>Was this on your last visit or phone call?</li>
+    </ul>
 
-  <h2>Empathy Lines</h2>
-  <ul>
-    <li>"I understand why you're looking to make changes. I'd feel the same way if I were paying for something that didn’t feel effective."</li>
-    <li>"I'm sorry if you haven’t seen results yet—I’ll do everything I can on this call to make it right."</li>
-    <li>"Thanks for sharing your price concerns. Everything feels more expensive lately and I get how heavy that is."</li>
-    <li>"Sounds like you just want to get your house taken care of—I'm sorry scheduling has gotten in the way."</li>
-    <li>"Thank you for reaching out. I’m documenting this to ensure the right teams are looped in. I’m so sorry for the experience you had."</li>
-  </ul>
+    <h2>3rd - Offer Solutions</h2>
+    <p><b>Reservice: </b><i>"I would love to send someone to inspect and spot treat trouble areas. This is completely free as part
+        of your plan."</i></p>
+    <p><b>VIP Service: </b><i>"I can schedule a VIP visit with one of our lead techs for a free, in-depth treatment and inspection."</i></p>
+    <p><b>Red/Yellow Note: </b><i>"I can flag your account with preferences so future visits match your needs exactly."</i></p>
+    <p><b>Push Appointment: </b><i>"I can push your appointment to a day that works better while keeping your protection active."</i></p>
+    <p><b>Add a Coupon: </b><i>"Your seasonal treatment is vital. We can offer a discount on your next bill so you can maintain that barrier."</i></p>
+    <h2>Agent Reminders</h2>
+    <ul>
+      <li>Always empathize before resolving</li>
+      <li>Ask two or more diagnostic questions</li>
+      <li>Offer relevant solutions and explain <em>why</em></li>
+      <li>Document fully if the issue relates to employee interaction</li>
+    </ul>
+  </div>
 
-  <h2>Discovery Questions</h2>
-  <ul>
-    <li>What pests are you still seeing?</li>
-    <li>How long have you been seeing them?</li>
-    <li>Have you heard of or used our free reservices yet?</li>
-    <li>Are there ways our treatments could offer more value for you?</li>
-    <li>Are you exploring other options, or just looking to manage expenses?</li>
-    <li>What were your expectations for our service timing?</li>
-    <li>What days work best for future appointments?</li>
-    <li>Is this the first time this kind of scheduling issue has happened?</li>
-    <li>Can you explain what happened? Was this on your last visit or phone call?</li>
-  </ul>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleBtn = document.querySelector('.toggle-btn');
+      const sidebar = document.querySelector('.sidebar');
 
-  <h2>Value Solutions</h2>
-  <ul>
-    <li>Reservice: "I'd love to send someone to inspect and spot treat trouble areas. This is completely free as part of your plan."</li>
-    <li>VIP Service: "I’ll schedule a VIP visit with one of our lead techs for a free, in-depth treatment and inspection."</li>
-    <li>Red/Yellow Note: "I'll flag your account with preferences so future visits match your needs exactly."</li>
-    <li>Push Appointment: "I can push your appointment to a day that works better while keeping your protection active."</li>
-    <li>Add a Coupon: "Your seasonal treatment is vital—we’ll offer a discount on your next bill so you can maintain that barrier."</li>
-  </ul>
-
-  <h2>Agent Reminders</h2>
-  <ul>
-    <li>Always empathize before resolving</li>
-    <li>Ask two or more diagnostic questions</li>
-    <li>Offer relevant solutions and explain <em>why</em></li>
-    <li>Document fully if the issue relates to employee interaction</li>
-  </ul>
+      toggleBtn.addEventListener('click', function () {
+        sidebar.classList.toggle('collapsed');
+      });
+    });
+  </script>
 </body>
+
 </html>
