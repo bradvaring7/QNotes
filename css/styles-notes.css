@@ -1,0 +1,34 @@
+/* style-notes.css */
+
+/* Reset and base layout */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18pt;
+  line-height: 1.2;
+  background-color: #fff;
+  color: #222;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+/* Layout wrapper */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 20px;
+}
+
+/* Content elements */
+h1 {
+  font-size: 28pt;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding
