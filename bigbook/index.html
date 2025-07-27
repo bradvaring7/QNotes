@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Big Book of Bugs - QNotes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/styles-notes.css">
+    <style>
+        /* Collapsible section styling */
+        .bug-category {
+            margin: 1.5rem 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .bug-category-header {
+            background-color: #2c5aa0;
+            color: white;
+            padding: 1rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .bug-item {
+            border-bottom: 1px solid #eee;
+        }
+
+        .bug-item:last-child {
+            border-bottom: none;
+        }
+
+        .bug-header {
+            background-color: #f8f9fa;
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            user-select: none;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.2s ease;
+        }
+
+        .bug-header:hover {
+            background-color: #e9ecef;
+        }
+
+        .bug-header.active {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+        }
+
+        .bug-toggle {
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: transform 0.2s ease;
+        }
+
+        .bug-toggle.rotated {
+            transform: rotate(45deg);
+        }
+
+        .bug-content {
+            padding: 1rem;
+            display: none;
+            line-height: 1.5;
+            background-color: #fff;
+        }
+
+        .bug-content.active {
+            display: block;
+        }
+
+        .image-placeholder {
+            background-color: #f8f9fa;
+            border: 2px dashed #ddd;
+            padding: 1rem;
+            text-align: center;
+            margin: 0.5rem 0;
+            border-radius: 4px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .search-container {
+            margin: 1rem 0;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 6px;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .coverage-note {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 4px;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+            color: #856404;
+        }
+
+        .not-covered {
+            background-color: #f8d7da;
+            border-left: 4px solid #dc3545;
+        }
+
+        .not-covered .bug-header {
+            background-color: #f5c6cb;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Sidebar will be injected here -->
+    
+    <div class="main">
+        <div class="main-header">
+            <h1>🐛 Big Book of Bugs</h1>
+            <p class="category-line">
+                <a href="../index.html">HOME</a> > Big Book
+            </p>
+        </div>
+        
+        <div class="main-content">
+            <p>It's essential to be informed about pests that customers may call in about! Under each subscription, you'll find a comprehensive list of covered pests. Click on each dropdown to see what each common pest looks like and read a brief description of how they affect our customers.</p>
+
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="🔍 Use Ctrl+F to find a specific pest, or type here to filter..." id="bugSearch">
+            </div>
+
+            <!-- PEST CONTROL CATEGORY -->
+            <div class="bug-category">
+                <div class="bug-category-header">
+                    🐜 Covered Under Pest Control
+                </div>
+
+                <div class="bug-item">
+                    <div class="bug-header" onclick="toggleBug(this)">
+                        <span>Ants</span>
+                        <span class="bug-toggle">+</span>
+                    </div>
+                    <div class="bug-content">
+                        <div class="image-placeholder">[Ant Image - Place in assets folder]</div>
+                        <p>Ants are one of the most common pests that customers will frequently call in about. They are social insects living in colonies, foraging for food and sometimes causing infestations. Understanding their behavior helps identify entry points and nests, which is crucial for effective pest control. Different species may require specific treatment approaches. Regular inspections, targeted baits, and eliminating food sources are essential in managing ant infestations and addressing customer concerns.</p>
+                    </div>
+                </div>
+
+                <div class="bug-item">
+                    <div class="bug-header" onclick="toggleBug(this)">
+                        <span>Wasps</span>
+                        <span class="bug-toggle">+</span>
+                    </div>
+                    <div class="bug-content">
+                        <div class="image-placeholder">[Wasp Image - Place in assets folder]</div>
+                        <p>Wasps are flying insects with a slender body and a narrow waist. They can become a significant concern for families when they build nests near homes or play areas. Their presence poses stinging risks, potentially causing painful reactions and allergic responses, leading to safety and health concerns for family members.</p>
+                    </div>
+                </div>
+
+                <div class="bug-item">
+                    <div class="bug-header" onclick="toggleBug(this)">
+                        <span>Spiders</span>
+                        <span class="bug-toggle">+</span>
+                    </div>
+                    <div class="bug-content">
+                        <div class="image-placeholder">[Spider Image - Place in assets folder]</div>
+                        <p>Spiders are another common pests customers will call in about. Arachnids with eight legs and two body segments, distinguished from insects by lacking antennae and wings. While most spiders are harmless and beneficial, some species can cause concern for families. Venomous spiders, like the black widow or brown recluse, can pose health risks if their bites are not promptly treated, leading to anxiety and potential safety measures for families in infested areas.</p>
+                    </div>
+                </div>
+
+                <div class="bug-item">
+                    <div class="bug-header" onclick="toggleBug(this)">
+                        <span>Cockroaches</span>
+                        <span class="bug-toggle">+</span>
+                    </div>
+                    <div class="bug-content">
+                        <div class="image-placeholder">[Cockroach Image - Place in assets folder]</div>
+                        <p>Common Cockroaches are resilient insects with flattened bodies, long antennae, and six legs. They are considered pests due to their ability to thrive in various environments and reproduce rapidly. Cockroach infestations can negatively impact families by posing health risks, as they can contaminate food and surfaces, trigger allergies, and spread pathogens, leading to concerns about sanitation and well-being within the household.</p>
+                    </div>
+                </div>
+
+                <div class="bug-item">
+                    <div class="bug-header" onclick="toggleBug(this)">
+                        <span>Crickets</span>
+                        <span class="bug-toggle">+</span>
+                    </div>
+                    <div class="bug-content">
+                        <div class="image-placeholder">[Cricket Image - Place in assets folder]</div>
+                        <p>Crickets are small, winged insects known for their distinctive chirping sounds produced by rubbing their wings together. While they are generally harmless and can even be considered beneficial in some cases, their constant chirping can become a nuisance, especially when they invade homes or living spaces. For families, the noise can be disruptive and may lead to sleep disturbances, which might prompt the need for pest control measures to manage cricket populations.</p>
+                    </div>
+                </div>
+
+                <div class="bug-item">
+                    <div class="bug-header" onclick="toggleBug(this)">
+                        <span>Earwigs</span>
+                        <span class="bug-toggle">+</span>
+                    </div>
+                    <div class="bug-content">
+                        <div class="image-placeholder">[Earwig Image - Place in assets folder]</div>
+                        <p>Earwigs are small, elongated insects with pincers at the end of their abdomen. While they do not crawl into human ears as the name suggests, they can still be a nuisance for families. Earwigs may enter homes seeking shelter and food, potentially causing alarm and discomfort for residents. Although they are not harmful, their presence may prompt families to take preventive measures to keep them from becoming a persistent annoyance.</p>
+                    </div>
+                </div>
+
+                <div class="bug-item">
+                    <div class="bug-header" onclick="toggleBug(this)">
+                        <span>Cicada Killers (Form of Wasps)</span>
+                        <span class="bug-toggle">+</span>
+                    </div>
+                    <div class="bug-content">
+                        <div class="coverage-note">Cicada Killers are a form of wasp, so they are covered under pest control.</div>
+                        <div class="image-placeholder">[Cicada Killer Image - Place in assets folder]</div>
+                        <p>Cicada killers are large solitary wasps that hunt cicadas to provision their underground nests. Female cicada killers paralyze cicadas with their venom, lay eggs on them, and the hatched larvae feed on the cicadas. While their size might cause concern, cicada killers are generally not aggressive towards humans. They can occasionally disrupt lawns and gardens with their burrows, but their impact on families is minimal.</p>
+                    </div>
+                </div>
+
+                <div class="bug-item">
+                    <div class="bug-header" onclick="toggleBug(this)">
+                        <span>Pill Bugs/Sow Bugs</span>
+                        <span class="bug-toggle">+</span>
+                    </div>
+                    <div class="bug-content">
+                        <div class="image-placeholder">[Pill Bug Image - Place in assets folder]</div>
+                        <p>Pillbugs, and Sow bugs are very similar insects. Also known as roly-polies or woodlice, are small crustaceans that are often found in damp and dark areas of homes and gardens. While they do not pose any direct health risks to families, their presence can be bothersome and unpleasant. Pillbugs may become a nuisance when they enter homes in large numbers, leading to concerns about cleanliness and the need for pest control measures to prevent infestations.</p>
+                    </div>
+                </div>
+
+                <div class="bug-item">
+                    <div class="bug-header" onclick="toggleBug(this)">
+                        <span>Silverfish</span>
+                        <span class="bug-toggle">+</span>
+                    </div>
+                    <div class="bug-content">
+                        <div class="image-placeholder">[Silverfish Image - Place in assets folder]</div>
+                        <p>Silverfish are small, wingless insects with a distinctive teardrop-shaped body covered in silver-like scales. They are nocturnal creatures that prefer damp and dark environments, making bathrooms, basements, and kitchens common infestation areas. While silverfish do not pose significant health risks to humans, they can cause damage to books, paper goods, clothing, and other household items, leading to frustration and the need for pest control measures to protect belongings and maintain a pest-free home for families.</p>
+                    </div>
+                </div>
+
+                <div class="bug-item">
+                    <div class="bug-header" onclick="toggleBug(this)">
+                        <span>Mites</span>
+                        <span class="bug-toggle">+</span>
+                    </div>
+                    <div class="bug-content">
+                        <div class="image-placeholder">[Mites Image - Place in assets folder]</div>
+                        <p>Mites are tiny arachnids that belong to the Acari order. They can be found in various environments, including homes. While many mite species are harmless, some, like dust mites and clover mites (tiny red bugs), can cause problems for families by triggering allergies and skin irritations.</p>
+                    </div>
+                </div>
+
+                <div class="bug-item">
+                    <div class="bug-header" onclick="toggleBug(this)">
+                        <span>Millipedes</span>
+                        <span class="bug-toggle">+</span>
+                    </div>
+                    <div class="bug-content">
+                        <div class="image-placeholder">[Millipede Image - Place in assets folder]</div>
+                        <p>Millipedes found in American households typically range from a few centimeters to a few inches in length. While they are not dangerous to humans, their presence in homes can be unsettling for families, and they might become a nuisance when their population increases indoors. Effective pest control methods are necessary to manage millipede infestations and alleviate any concerns they may cause.</p>
+                    </div>
+                </div>
+
+                <div class="bug-item">
+                    <div class="bug-header" onclick="toggleBug(this)">
+                        <span>Weevil</span>
+                        <span class="bug-toggle">+</span>
+                    </div>
+                    <div class="bug-content">
+                        <div class="image-placeholder">[Weevil Image - Place in assets folder]</div>
+                        <p>Weevils are small beetles known for their elongated snouts, and they can be common household pests. They can cause:</p>
+                        <ul>
+                            <li><strong>Food Contamination:</strong> Weevils infest various food items, such as grains, flour, rice, pasta, and cereal, leading to contamination and spoilage.</li>
+                            <li><strong>Health Concerns:</strong> Consuming weevil-infested food can cause gastrointestinal discomfort and pose health risks.</li>
+                            <li><strong>Financial Loss:</strong> Weevils can result in food waste, leading to additional expenses for families.</li>
+                        </ul>
+                        <p>Overall, weevils can disrupt food supplies, create health hazards, and cause financial and emotional stress for families affected by their presence.</p>
+                    </div>
+                </div>
+
+                <div class="bug-item">
+                    <div class="bug-header" onclick="toggleBug(this)">
+                        <span>Clover Mites</span>
+                        <span class="bug-toggle">+</span>
+                    </div>
+                    <div class="bug-content">
+                        <div class="coverage-note">These are a Bonus pest under Pest Control.</div>
+                        <div class="image-placeholder">[Clover Mites Image - Place in assets folder]</div>
+                        <p>Clover mites are tiny, reddish-brown arachnids that often become pests around homes and gardens. They are very small, about the size of a pinhead, and are commonly found in large numbers on sunny sides of buildings, especially near vegetation like clover and grass. While clover mites do not pose any direct health risks to humans, their presence can be bothersome to families as they may invade homes in large numbers, especially during cooler months, creating a nuisance and leaving red stains when crushed.</p>
+                    </div>
+                </div>
+
+                <div class="bug-item">
+                    <div class="bug-header" onclick="toggleBug(this)">
+                        <span>Centipedes</span>
+                        <span class="bug-toggle">+</span>
+                    </div>
+                    <div class="bug-content">
+                        <div class="image-placeholder">[Centipede Image - Place in assets folder]</div>
+                        <p>Centipedes are elongated arthropods with numerous legs, ranging from 15 to 177 pairs, depending on the species. They have segmented bodies and are commonly found in damp or dark areas of homes. While centipedes are generally not harmful to humans, their presence can be unsettling for families, especially if they infest living spaces or crawl on walls and floors.</p>
+                    </div>
+                </div>
+
+                <div class="bug-item">
+                    <div class="bug-header" onclick="toggleBug(this)">
+                        <span>Stink Bugs</span>
+                        <span class="bug-toggle">+</span>
+                    </div>
+                    <div class="bug-content">
+                        <div class="image-placeholder">[Stink Bug Image - Place in assets folder]</div>
+                        <p>Stink bugs are small, shield-shaped insects known for their distinct odor when disturbed or crushed. They can become a nuisance for families when they invade homes and gardens seeking shelter and food. While stink bugs are not harmful to humans, their presence can cause annoyance and frustration, especially during large infestations.</p>
+                    </div>
+                </div>
+
+                <div class="bug-item">
+                    <div class="bug-header" onclick="toggleBug(this)">
+                        <span>Boxelder Bugs</span>
+                        <span class="bug-toggle">+</span>
+                    </div>
+                    <div class="bug-content">
+                        <div class="image-placeholder">[Boxelder Bug Image - Place in assets folder]</div>
+                        <p>Boxelder bugs are small, black and reddish-brown insects that are commonly found around boxelder trees, as well as maple and ash trees. They become pests to families when they gather in large numbers on the exterior walls and around windows of homes during the fall season, seeking shelter for the winter. While boxelder bugs are not harmful to humans and do not bite or sting, their presence can be a nuisance as they may enter the house.</p>
+                    </div>
+                </div>
+
+                <div class="bug-item">
+                    <div class="bug-header" onclick="toggleBug(this)">
+                        <span>Lady Bugs</span>
+                        <span class="bug-toggle">+</span>
+                    </div>
+                    <div class="bug-content">
+                        <div class="image-placeholder">[Lady Bug Image - Place in assets folder]</div>
+                        <p>Ladybugs, also called ladybirds or lady beetles, are small, colorful insects with spots on their wings. They are often considered good bugs that eat plant pests like aphids, which helps keep gardens and crops healthy. While ladybugs don't harm families and are typically liked, we can go out to treat for them specifically.</p>
+                    </div>
+                </div>
+
+                <div class="bug-item">
+                    <div class="bug-header" onclick="toggleBug(this)">
+                        <span>Carpenter Bees</span>
+                        <span class="bug-toggle">+</span>
+                    </div>
+                    <div class="bug-content">
+                        <div class="coverage-note">We can treat for carpenter bees in pest control only up to 10 holes. If the customer has more, they will need a "Carpenter Bee Plan" Subscription.</div>
+                        <div class="image-placeholder">[Carpenter Bee Image - Place in assets folder]</div>
+                        <p>Carpenter bees are large, solitary bees often mistaken for bumblebees due to their similar appearance. They are named "carpenter" bees because they excavate nesting galleries in wooden structures, such as eaves, decks, and fences. While the male carpenter bees are not aggressive and lack stingers, the females can sting if provoked, and their nesting activities can lead to structural damage over time.</p>
+                    </div>
+                </div>
+
+                <div class="bug-item">
+                    <div class="bug-header" onclick="toggleBug(this)">
+                        <span>Snakes</span>
+                        <span class="bug-toggle">+</span>
+                    </div>
+                    <div class="bug-content">
+                        <div class="coverage-note">Snakes are "Bonus Pest" Under pest control and can be taken care of if asked by a customer.</div>
+                        <div class="image-placeholder">[Snake Image - Place in assets folder]</div>
+                        <p>While most snakes are non-venomous and play vital roles in controlling pest populations, some venomous species can pose a threat to families if encountered in certain regions. Fear of snakes can also cause anxiety for some family members, especially if they live in areas with a higher likelihood of encountering venomous species.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RODENT BAITING CATEGORY -->
+            <div class="bug-category">
+                <div class="bug-category-header">
+                    🐭 Covered Under Rodent Baiting
+                </div>
+
+                <div class="bug-item">
+                    <div class="bug-header" onclick="toggleBug(this)">
+                        <span>Mice</span>
+                        <span class="bug-toggle">+</span>
+                    </div>
+                    <div class="bug-content">
+                        <div class="coverage-note">With Rodent Baiting we treat the exterior and a few sticky traps on the inside. If a home requires more than a few sticky traps on the inside the customer will need "Interior Rodent Plan."</div>
+                        <div class="image-placeholder">[Mouse Image - Place in assets folder]</div>
+                        <p>Mice are small rodents with pointed snouts, long tails, and round ears. They are known for their ability to adapt and reproduce quickly, making them common household pests. Mice can enter homes through small openings, seeking food, water, and shelter. Their presence can lead to contamination of food, damage to property from gnawing, and the potential spread of diseases through their droppings.</p>
+                    </div>
+                </div>
+
+                <div class="bug-item">
+                    <div class="bug-header" onclick="toggleBug(this)">
+                        <span>Voles</span>
+                        <span class="bug-toggle">+</span>
+                    </div>
+                    <div class="bug-content">
+                        <div class="image-placeholder">[Vole Image - Place in assets folder]</div>
+                        <p>Voles are small rodents that resemble mice but have a stouter body and a shorter, hairy tail. They are known for their extensive tunnel systems and can cause damage to lawns, gardens, and crops by feeding on plants and roots. Voles can impact families by causing damage to landscaping and gardens, leading to potential financial losses and frustration for homeowners.</p>
+                    </div>
+                </div>
+
+                <div class="bug-item">
+                    <div class="bug-header" onclick="toggleBug(this)">
+                        <span>Rats</span>
+                        <span class="bug-toggle">+</span>
+                    </div>
+                    <div class="bug-content">
+                        <div class="image-placeholder">[Rat Image - Place in assets folder]</div>
+                        <p>Rats are medium-sized rodents with long tails, pointed snouts, and sharp incisor teeth. They are highly adaptable and often seek shelter and food near human dwellings. Rats can negatively impact families through:</p>
+                        <ul>
+                            <li><strong>Health Risks:</strong> Can carry and transmit various diseases through droppings, urine, and bites</li>
+                            <li><strong>Contamination:</strong> Can contaminate food storage areas and surfaces</li>
+                            <li><strong>Structural Damage:</strong> Notorious for gnawing on materials, including electrical wires</li>
+                            <li><strong>Anxiety and Discomfort:</strong> Can cause significant stress and fear for families</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MOSQUITO/TICK/FLEA CATEGORY -->
+            <div class="bug-category">
+                <div class="bug-category-header">
+                    🦟 Mosquito Reduction/Tick Flea
+                </div>
+
+                <div class="bug-item">
+                    <div class="bug-header" onclick="toggleBug(this)">
+                        <span>Mosquitoes</span>
+                        <span class="bug-toggle">+</span>
+                    </div>
+                    <div class="bug-content">
+                        <div class="image-placeholder">[Mosquito Image - Place in assets folder]</div>
+                        <p>Mosquitoes are small flying insects known for their high-pitched buzzing sound. They have slender bodies with long legs and feed on the blood of humans and animals. Mosquitoes can be a nuisance to families, especially in warmer months, as their bites can cause itching and discomfort. Additionally, mosquitoes are vectors for various diseases, such as malaria, dengue fever, Zika virus, and West Nile virus, which can pose serious health risks to family members.</p>
+                    </div>
+                </div>
+
+                <div class="bug-item">
+                    <div class="bug-header" onclick="toggleBug(this)">
+                        <span>Ticks</span>
+                        <span class="bug-toggle">+</span>
+                    </div>
+                    <div class="bug-content">
+                        <div class="image-placeholder">[Tick Image - Place in assets folder]</div>
+                        <p>Ticks are small arachnids that feed on the blood of hosts, including humans and animals. In the United States, ticks can be found in various outdoor environments like forests and grasslands. They can transmit diseases like Lyme disease and Rocky Mountain spotted fever through their bites. These pesky critters are known to be a significant concern for families due to potential health risks.</p>
+                    </div>
+                </div>
+
+                <div class="bug-item">
+                    <div class="bug-header" onclick="toggleBug(this)">
+                        <span>Fleas</span>
+                        <span class="bug-toggle">+</span>
+                    </div>
+                    <div class="bug-content">
+                        <div class="image-placeholder">[Flea Image - Place in assets folder]</div>
+                        <p>Fleas are small, wingless insects that feed on the blood of mammals and birds, including humans and pets. Key characteristics:</p>
+                        <ul>
+                            <li>Known for their jumping ability, allowing easy movement between hosts</li>
+                            <li>Flea bites can cause itching, redness, and discomfort</li>
+                            <li>Can transmit diseases and parasites, such as tapeworms</li>
+                            <li>Infestations can be challenging to eradicate</li>
+                            <li>Require thorough cleaning and treatment of pets, bedding, and living areas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OTHER SUBSCRIPTION CATEGORIES -->
+            <div class="bug-category">
+                <div class="bug-category-header">
+                    🕳️ Mole Barrier Plan
+                </div>
+
+                <div class="bug-item">
+                    <div class="bug-header" onclick="toggleBug(this)">
+                        <span>Moles</span>
+                        <span class="bug-toggle">+</span>
+                    </div>
+                    <div class="bug-content">
+                        <div class="image-placeholder">[Mole Image - Place in assets folder]</div>
+                        <p>Moles are small, burrowing mammals known for creating tunnels and mounds in lawns and gardens. How they affect families:</p>
+                        <ul>
+                            <li><strong>Lawn Damage:</strong> Create unsightly and uneven mounds in lawns</li>
+                            <li><strong>Tripping Hazards:</strong> Raised mole tunnels can pose tripping hazards</li>
+                            <li><strong>Garden Destruction:</strong> May disrupt garden beds, uprooting plants</li>
+                            <li><strong>Financial Costs:</strong> Repairing damage can lead to additional expenses</li>
+                            <li><strong>Frustration and Stress:</strong> Dealing with persistent issues can cause stress</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PESTS NOT COVERED CATEGORY -->
+            <div class="bug-category not-covered">
+                <div class="bug-category-header">
+                    ❌ PESTS NOT COVERED - We do not treat for
+                </div>
+
+                <div class="bug-item">
+                    <div class="bug-header" onclick="toggleBug(this)">
+                        <span>Any type of Fly</span>
+                        <span class="bug-toggle">+</span>
+                    </div>
+                    <div class="bug-content">
+                        <div class="coverage-note">These could be 'Best fit for' and affected by our Pest Control but we do not guarantee to fully take care of the issue with our services.</div>
+                        <div class="image-placeholder">[Fly Image - Place in assets folder]</div>
+                        <p>Flies are common insects found all over the United States. Their impact on families includes pest infestations, food contamination, health risks from carrying pathogens, potential allergies and asthma triggers, and general discomfort and disturbance from constant buzzing and presence.</p>
+                    </div>
+                </div>
+
+                <div class="bug-item">
+                    <div class="bug-header" onclick="toggleBug(this)">
+                        <span>Japanese Beetles</span>
+                        <span class="bug-toggle">+</span>
+                    </div>
+                    <div class="bug-content">
+                        <div class="coverage-note">These could be 'Best fit for' and affected by our Pest Control but we do not guarantee to fully take care of the issue with our services. Japanese Beetles are a turf and ornamental pest. We cannot treat for them without additional licensing.</div>
+                        <div class="image-placeholder">[Japanese Beetle Image - Place in assets folder]</div>
+                        <p>Japanese beetles are invasive pests that feed on a wide variety of plants, causing significant damage to landscapes and gardens. These beetles are known for their voracious appetites, often skeletonizing leaves and destroying flowers and fruits. Families may face frustration from widespread plant damage and potential financial losses.</p>
+                    </div>
+                </div>
+
+                <div class="bug-item">
+                    <div class="bug-header" onclick="toggleBug(this)">
+                        <span>Bumblebees</span>
+                        <span class="bug-toggle">+</span>
+                    </div>
+                    <div class="bug-content">
+                        <div class="coverage-note">We do not treat for bumblebees because they are protected by the endangered species act.</div>
+                        <div class="image-placeholder">[Bumblebee Image - Place in assets folder]</div>
+                        <p>Bumblebees are large, fuzzy insects with distinctive black and yellow stripes, known for their role in pollinating plants. They play a crucial role in pollinating various plants, are beneficial in gardens and farms, have a generally non-aggressive nature, and typically have minimal negative effects on families. Their presence is often beneficial for gardens and ecosystems.</p>
+                    </div>
+                </div>
+
+                <!-- Add remaining not-covered pests here... -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="sidebar-bigbook.js"></script>
+    <script>
+        function toggleBug(header) {
+            const content = header.nextElementSibling;
+            const toggle = header.querySelector('.bug-toggle');
+            
+            // Close all other open bugs
+            document.querySelectorAll('.bug-content.active').forEach(item => {
+                if (item !== content) {
+                    item.classList.remove('active');
+                    item.previousElementSibling.classList.remove('active');
+                    item.previousElementSibling.querySelector('.bug-toggle').textContent = '+';
+                    item.previousElementSibling.querySelector('.bug-toggle').classList.remove('rotated');
+                }
+            });
+            
+            // Toggle current bug
+            content.classList.toggle('active');
+            header.classList.toggle('active');
+            
+            if (content.classList.contains('active')) {
+                toggle.textContent = '×';
+                toggle.classList.add('rotated');
+            } else {
+                toggle.textContent = '+';
+                toggle.classList.remove('rotated');
+            }
+        }
+
+        // Search functionality
+        document.getElementById('bugSearch').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const bugItems = document.querySelectorAll('.bug-item');
+            
+            bugItems.forEach(item => {
+                const bugName = item.querySelector('.bug-header span').textContent.toLowerCase();
+                const bugContent = item.querySelector('.bug-content').textContent.toLowerCase();
+                
+                if (bugName.includes(searchTerm) || bugContent.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
