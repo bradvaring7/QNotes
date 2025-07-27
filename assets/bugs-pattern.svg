@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" style="background: linear-gradient(45deg, #e8f5e8 0%, #d0f0d0 100%);">
+  <!-- Various bug illustrations scattered across the background -->
+  
+  <!-- Ant -->
+  <g transform="translate(100,100) scale(0.8)" opacity="0.3" fill="#2d5a2d">
+    <ellipse cx="20" cy="15" rx="8" ry="5"/>
+    <ellipse cx="35" cy="18" rx="6" ry="4"/>
+    <ellipse cx="48" cy="22" rx="9" ry="6"/>
+    <line x1="15" y1="20" x2="10" y2="25" stroke="#2d5a2d" stroke-width="2"/>
+    <line x1="25" y1="23" x2="20" y2="28" stroke="#2d5a2d" stroke-width="2"/>
+    <line x1="35" y1="25" x2="30" y2="30" stroke="#2d5a2d" stroke-width="2"/>
+    <line x1="45" y1="28" x2="40" y2="33" stroke="#2d5a2d" stroke-width="2"/>
+    <line x1="55" y1="30" x2="50" y2="35" stroke="#2d5a2d" stroke-width="2"/>
+    <line x1="65" y1="32" x2="60" y2="37" stroke="#2d5a2d" stroke-width="2"/>
+  </g>
+  
+  <!-- Spider -->
+  <g transform="translate(300,200) scale(0.9)" opacity="0.25" fill="#2d5a2d">
+    <circle cx="30" cy="25" r="12"/>
+    <circle cx="30" cy="40" r="8"/>
+    <line x1="18" y1="20" x2="5" y2="10" stroke="#2d5a2d" stroke-width="2"/>
+    <line x1="42" y1="20" x2="55" y2="10" stroke="#2d5a2d" stroke-width="2"/>
+    <line x1="15" y1="30" x2="2" y2="25" stroke="#2d5a2d" stroke-width="2"/>
+    <line x1="45" y1="30" x2="58" y2="25" stroke="#2d5a2d" stroke-width="2"/>
+    <line x1="15" y1="40" x2="2" y2="50" stroke="#2d5a2d" stroke-width="2"/>
+    <line x1="45" y1="40" x2="58" y2="50" stroke="#2d5a2d" stroke-width="2"/>
+    <line x1="18" y1="50" x2="5" y2="60" stroke="#2d5a2d" stroke-width="2"/>
+    <line x1="42" y1="50" x2="55" y2="60" stroke="#2d5a2d" stroke-width="2"/>
+  </g>
+  
+  <!-- Beetle -->
+  <g transform="translate(500,80) scale(0.7)" opacity="0.35" fill="#2d5a2d">
+    <ellipse cx="25" cy="20" rx="18" ry="12"/>
+    <circle cx="12" cy="15" r="4"/>
+    <line x1="5" y1="25" x2="0" y2="35" stroke="#2d5a2d" stroke-width="2"/>
+    <line x1="15" y1="30" x2="10" y2="40" stroke="#2d5a2d" stroke-width="2"/>
+    <line x1="35" y1="30" x2="40" y2="40" stroke="#2d5a2d" stroke-width="2"/>
+    <line x1="45" y1="25" x2="50" y2="35" stroke="#2d5a2d" stroke-width="2"/>
+  </g>
+  
+  <!-- Fly -->
+  <g transform="translate(650,250) scale(0.6)" opacity="0.28" fill="#2d5a2d">
+    <ellipse cx="20" cy="20" rx="8" ry="12"/>
+    <ellipse cx="15" cy="10" rx="12" ry="4"/>
+    <ellipse cx="25" cy="10" rx="12" ry="4"/>
+    <circle cx="20" cy="8" r="3"/>
+    <line x1="15" y1="25" x2="10" y2="35" stroke="#2d5a2d" stroke-width="1"/>
+    <line x1="25" y1="25" x2="30" y2="35" stroke="#2d5a2d" stroke-width="1"/>
+  </g>
+  
+  <!-- Wasp -->
+  <g transform="translate(200,400) scale(0.8)" opacity="0.32" fill="#2d5a2d">
+    <ellipse cx="25" cy="20" rx="15" ry="8"/>
+    <circle cx="15" cy="15" r="5"/>
+    <ellipse cx="12" cy="8" rx="8" ry="3"/>
+    <ellipse cx="18" cy="8" rx="8" ry="3"/>
+    <line x1="20" y1="25" x2="15" y2="35" stroke="#2d5a2d" stroke-width="2"/>
+    <line x1="30" y1="25" x2="35" y2="35" stroke="#2d5a2d" stroke-width="2"/>
+    <line x1="10" y1="20" x2="5" y2="25" stroke="#2d5a2d" stroke-width="2"/>
+    <line x1="40" y1="20" x2="45" y2="25" stroke="#2d5a2d" stroke-width="2"/>
+  </g>
+  
+  <!-- Cockroach -->
+  <g transform="translate(450,350) scale(0.9)" opacity="0.26" fill="#2d5a2d">
+    <ellipse cx="30" cy="25" rx="20" ry="10"/>
+    <circle cx="15" cy="20" r="6"/>
+    <line x1="10" y1="30" x2="5" y2="40" stroke="#2d5a2d" stroke-width="2"/>
+    <line x1="20" y1="35" x2="15" y2="45" stroke="#2d5a2d" stroke-width="2"/>
+    <line x1="40" y1="35" x2="35" y2="45" stroke="#2d5a2d" stroke-width="2"/>
+    <line x1="50" y1="30" x2="55" y2="40" stroke="#2d5a2d" stroke-width="2"/>
+    <line x1="8" y1="15" x2="0" y2="10" stroke="#2d5a2d" stroke-width="1"/>
+    <line x1="12" y1="12" x2="4" y2="5" stroke="#2d5a2d" stroke-width="1"/>
+  </g>
+  
+  <!-- Additional scattered bugs for more coverage -->
+  <g transform="translate(600,400) scale(0.5)" opacity="0.2" fill="#2d5a2d">
+    <ellipse cx="20" cy="15" rx="8" ry="5"/>
+    <ellipse cx="35" cy="18" rx="6" ry="4"/>
+    <line x1="15" y1="20" x2="10" y2="25" stroke="#2d5a2d" stroke-width="1"/>
+    <line x1="25" y1="23" x2="20" y2="28" stroke="#2d5a2d" stroke-width="1"/>
+  </g>
+  
+  <g transform="translate(80,350) scale(0.6)" opacity="0.24" fill="#2d5a2d">
+    <circle cx="30" cy="25" r="8"/>
+    <line x1="22" y1="20" x2="15" y2="15" stroke="#2d5a2d" stroke-width="1"/>
+    <line x1="38" y1="20" x2="45" y2="15" stroke="#2d5a2d" stroke-width="1"/>
+    <line x1="22" y1="30" x2="15" y2="35" stroke="#2d5a2d" stroke-width="1"/>
+    <line x1="38" y1="30" x2="45" y2="35" stroke="#2d5a2d" stroke-width="1"/>
+  </g>
+  
+  <!-- Small scattered bugs -->
+  <circle cx="150" cy="300" r="4" opacity="0.2" fill="#2d5a2d"/>
+  <circle cx="350" cy="150" r="5" opacity="0.24" fill="#2d5a2d"/>
+  <circle cx="550" cy="450" r="3" opacity="0.18" fill="#2d5a2d"/>
+  <circle cx="700" cy="100" r="4" opacity="0.22" fill="#2d5a2d"/>
+  <circle cx="80" cy="500" r="5" opacity="0.19" fill="#2d5a2d"/>
+  <circle cx="400" cy="500" r="3" opacity="0.21" fill="#2d5a2d"/>
+  <circle cx="250" cy="50" r="4" opacity="0.17" fill="#2d5a2d"/>
+  
+</svg>

@@ -9,23 +9,30 @@
     <style>
         /* Collapsible section styling */
         .bug-category {
-            margin: 1.5rem 0;
+            margin-top: 0rem;
+            margin-bottom: 1rem;
+            margin-left: rem;
+            margin-right: 0.2rem;
             border: 1px solid #ddd;
             border-radius: 6px;
             overflow: hidden;
+            max-width: 100%;
         }
 
         .bug-category-header {
-            background-color: #2c5aa0;
-            color: white;
-            padding: 1rem;
-            font-size: 1.1rem;
+            background-color: #ffffffd9;
+            color: #010abe;
+            border: 1px solid #000ac8;
+            padding: 0.25rem;
+            margin-left: 2.0rem;
+            font-size: 1.1em;
             font-weight: bold;
-            text-align: center;
+            text-align: right;
         }
 
         .bug-item {
             border-bottom: 1px solid #eee;
+            margin: 1rem 0;
         }
 
         .bug-item:last-child {
@@ -34,7 +41,7 @@
 
         .bug-header {
             background-color: #f8f9fa;
-            padding: 0.75rem 1rem;
+            padding: .2rem .4rem;
             cursor: pointer;
             user-select: none;
             font-weight: 500;
@@ -50,7 +57,7 @@
 
         .bug-header.active {
             background-color: #d4edda;
-            border-left: 4px solid #28a745;
+            border: 1px solid #28a745;
         }
 
         .bug-toggle {
@@ -86,10 +93,14 @@
         }
 
         .search-container {
-            margin: 1rem 0;
+
             padding: 1rem;
             background-color: #f8f9fa;
             border-radius: 6px;
+            max-width: 95%;
+            margin-left: 1.0rem;
+            margin-right: 0.5em;
+            max-width: 95%;
         }
 
         .search-box {
@@ -111,8 +122,9 @@
         }
 
         .not-covered {
-            background-color: #f8d7da;
-            border-left: 4px solid #dc3545;
+            background-color: #ffffff00;
+            color: rgb(40, 0, 0);
+            border: 1px solid red;
         }
 
         .not-covered .bug-header {
@@ -126,18 +138,11 @@
     
     <div class="main">
         <div class="main-header">
-            <h1>🐛 Big Book of Bugs</h1>
-            <p class="category-line">
-                <a href="../index.html">HOME</a> > Big Book
-            </p>
+            <h1>Big Book of Bugs🐛</h1>
         </div>
         
         <div class="main-content">
-            <p>It's essential to be informed about pests that customers may call in about! Under each subscription, you'll find a comprehensive list of covered pests. Click on each dropdown to see what each common pest looks like and read a brief description of how they affect our customers.</p>
 
-            <div class="search-container">
-                <input type="text" class="search-box" placeholder="🔍 Use Ctrl+F to find a specific pest, or type here to filter..." id="bugSearch">
-            </div>
 
             <!-- PEST CONTROL CATEGORY -->
             <div class="bug-category">
@@ -151,7 +156,7 @@
                         <span class="bug-toggle">+</span>
                     </div>
                     <div class="bug-content">
-                        <div class="image-placeholder">[Ant Image - Place in assets folder]</div>
+                        <div class="image-placeholder"><img class="book-image" src="assets/cfffa59a-4c3d-4bb4-833f-173a8d69b282.png"></div>
                         <p>Ants are one of the most common pests that customers will frequently call in about. They are social insects living in colonies, foraging for food and sometimes causing infestations. Understanding their behavior helps identify entry points and nests, which is crucial for effective pest control. Different species may require specific treatment approaches. Regular inspections, targeted baits, and eliminating food sources are essential in managing ant infestations and addressing customer concerns.</p>
                     </div>
                 </div>
@@ -487,7 +492,7 @@
             <!-- PESTS NOT COVERED CATEGORY -->
             <div class="bug-category not-covered">
                 <div class="bug-category-header">
-                    ❌ PESTS NOT COVERED - We do not treat for
+                    ❌ PESTS NOT COVERED
                 </div>
 
                 <div class="bug-item">
@@ -531,7 +536,7 @@
         </div>
     </div>
     
-    <script src="sidebar-bigbook.js"></script>
+    <script src="../js/sidebar-simple.js"></script>
     <script>
         function toggleBug(header) {
             const content = header.nextElementSibling;
