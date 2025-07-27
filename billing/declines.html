@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decline Codes - QNotes</title>
+    <link rel="stylesheet" href="../css/styles-notes.css">
+    <style>
+        /* Table styling for decline codes */
+        .decline-table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            margin-left: 1.0rem;
+            /* Add left margin to match content */
+            font-size: 0.95rem;
+        }
+
+        .decline-table th,
+        .decline-table td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .decline-table th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .decline-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .decline-table tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .decline-table td:first-child {
+            width: 35%;
+            /* Increased from 30% to 35% to prevent wrapping */
+            font-weight: 500;
+            white-space: nowrap;
+            /* Prevents text wrapping in first column */
+        }
+
+        .decline-table td:last-child {
+            width: 65%;
+            /* Adjusted to 65% */
+            line-height: 1.4;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Sidebar will be injected here -->
+
+    <div class="main">
+        <div class="main-header">
+            <h1>Decline Codes</h1>
+            <p class="category-line">
+                <a href="index.html">BILLING</a> > Decline Codes
+            </p>
+        </div>
+
+        <div class="main-content">
+            <p>When a payment is declined, understanding the specific decline code helps agents provide accurate guidance to customers. Below are the most common decline codes and recommended actions.</p>
+
+            <table class="decline-table">
+                <thead>
+                    <tr>
+                        <th>Codes</th>
+                        <th>Description & Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Do Not Honor</strong></td>
+                        <td>The customer's bank is unwilling to accept the transaction. The customer will need to contact their bank for more details regarding this generic decline.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Insufficient Funds</strong></td>
+                        <td>The account did not have sufficient funds to cover the transaction amount at the time of the transaction – subsequent attempts at a later date may be successful.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Limit Exceeded</strong></td>
+                        <td>The attempted transaction exceeds the withdrawal limit of the account. The customer will need to contact their bank to change the account limits or use a different payment method.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cardholder's Activity Limit Exceeded</strong></td>
+                        <td>The attempted transaction exceeds the activity limit of the account. The customer will need to contact their bank to change the account limits or use a different payment method.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Expired Card</strong></td>
+                        <td>Card is expired. The customer will need to use a different payment method.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Invalid Credit Card Number</strong></td>
+                        <td>The customer entered an invalid payment method or made a typo in their credit card information. Have the customer correct their payment information and attempt the transaction again – if the decline persists, they will need to contact their bank.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Invalid Expiration Date</strong></td>
+                        <td>The customer entered an invalid payment method or made a typo in their card expiration date. Have the customer correct their payment information and attempt the transaction again – if the decline persists, they will need to contact their bank.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>No Account</strong></td>
+                        <td>The submitted card number is not on file with the card-issuing bank. The customer will need to contact their bank.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Agent Reminders</h2>
+            <ul>
+                <li>Always explain the decline reason clearly to the customer</li>
+                <li>For bank-related issues, direct customer to contact their bank</li>
+                <li>For input errors, help customer correct their payment information</li>
+                <li>Suggest alternative payment methods when appropriate</li>
+                <li>Document decline codes and actions taken in account notes</li>
+                <li>Be patient and helpful when customers are frustrated with declines</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="sidebar.js"></script>
+</body>
+
+</html>

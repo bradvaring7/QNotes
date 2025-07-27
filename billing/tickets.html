@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workday Tickets - QNotes</title>
+    <link rel="stylesheet" href="../css/styles-notes.css">
+    <style>
+        /* For pages without sticky header (like billing index) */
+        .main h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+            /* Restore original spacing for non-sticky pages */
+            margin-top: 1rem;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 4px;
+            color: #333;
+        }
+
+        /* Override for sticky header pages */
+        .main-header h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0;
+            /* Keep tight spacing for sticky headers */
+            margin-top: 0;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 4px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Sidebar will be injected here -->
+
+    <div class="main">
+        <div class="main-header">
+            <h1>Workday Tickets</h1>
+            <p class="category-line">
+                <a href="index.html">BILLING</a> > Workday Tickets
+            </p>
+        </div>
+
+        <div class="main-content">
+            <h2>Case Types</h2>
+
+            <h3>Billing: Customer Check Payment Status</h3>
+            <ul>
+                <li>Use when customer reports check payment missing from system</li>
+                <li>Confirm bank processing before escalating</li>
+            </ul>
+
+            <h3>Billing: Customer Refund Request</h3>
+            <ul>
+                <li>Submit for full or partial refunds via original payment method</li>
+                <li>Processing time: 7–10 business days</li>
+                <li>⚠️ If refund > $500 → Email: bigrefunds@greenixpc.com instead of submitting ticket</li>
+                <li>Include full customer details in email</li>
+            </ul>
+
+            <h3>Billing: General Billing Support</h3>
+            <ul>
+                <li>Use for non-case-type questions or general info requests</li>
+                <li>Can relate to specific customer or generic billing logic</li>
+            </ul>
+
+            <h3>Billing: Reverse Coupon</h3>
+            <ul>
+                <li>Used to remove coupon from customer account</li>
+                <li>Document reason in PestRoutes clearly</li>
+            </ul>
+
+            <h3>Billing: Void Customer Payment</h3>
+            <ul>
+                <li>Only valid on same business day as original charge</li>
+                <li>Entire payment must be voided—no partial voids</li>
+                <li>Voids requested after 4pm are not guaranteed</li>
+            </ul>
+
+            <h2>Accessing Workday Help</h2>
+            <ul>
+                <li>From Workday Apps Menu → Click "Help"</li>
+                <li>Scroll down → Click "Create Case"</li>
+                <li>Bookmark this page for future ticketing speed</li>
+            </ul>
+
+            <h2>Case Setup Flow</h2>
+            <ul>
+                <li>Case Type → Select one of five billing options</li>
+                <li>Case Title → Use Account # or brief description</li>
+                <li>Detailed Description → Optional</li>
+                <li><b>Add Required Details → Mandatory</b>
+                    <ul>
+                        <li>PestRoutes ID + Customer Name</li>
+                        <li>Fields adjust dynamically by case type</li>
+                        <li>Click OK to confirm case data</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>Case Management</h2>
+            <ul>
+                <li>Ticket generates instantly</li>
+                <li>Status visible in Workday inbox → "Recent Cases"</li>
+                <li>Click case for live chat / agent notes</li>
+                <li>Status auto-updates as agent works</li>
+                <li>Case ID Format: CASE_#### | Example: CASE_0333</li>
+            </ul>
+
+            <h2>Agent Reminders</h2>
+            <ul>
+                <li>Always complete "Add Required Details" for accurate routing</li>
+                <li>Use PestRoutes conventions precisely</li>
+                <li>Do not use other case types unless instructed</li>
+                <li>Bookmark Help Center for fast reuse</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="sidebar.js"></script>
+</body>
+
+</html>

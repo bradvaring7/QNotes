@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Methods - QNotes</title>
+    <link rel="stylesheet" href="../css/styles-notes.css">
+</head>
+
+<body>
+    <!-- Sidebar will be injected here -->
+
+    <div class="main">
+        <div class="main-header">
+            <h1>Payment Methods</h1>
+            <p class="category-line">
+                <a href="index.html">BILLING</a> > Payment Methods
+            </p>
+        </div>
+
+        <div class="main-content">
+            <h2>Accepted Payment Methods</h2>
+            
+            <h3>Credit/Debit Card</h3>
+            <ul>
+                <li>Visa, MasterCard, Discover, American Express</li>
+            </ul>
+            
+            <h3>Bank Account</h3>
+            <ul>
+                <li>Account + Routing Number</li>
+            </ul>
+            
+            <h3>Mailed Check</h3>
+            <ul>
+                <li>Greenix Holdings LLC</li>
+                <li>PO BOX 734929</li>
+                <li>Chicago, IL 60673</li>
+            </ul>
+            
+            <h3>Customer Portal</h3>
+            <ul>
+                <li>Customers may add methods or pay via portal login</li>
+            </ul>
+
+            <h2>Not Accepted</h2>
+            <ul>
+                <li>Cash (mailed or handed)</li>
+                <li>Payments to Service Professionals</li>
+                <li>Prepaid cards (e.g., gift cards, money orders, Vanilla cards)</li>
+            </ul>
+
+            <h2>Adding a Payment Method</h2>
+            <ol>
+                <li>Use <b>Secure Pause</b> before collecting sensitive billing info</li>
+                <li>Go to customer card → "Billing" tab</li>
+                <li>Click <b>+ Add Payment Method</b></li>
+                <li>Choose method:
+                    <ul>
+                        <li>Credit Card: Fill out card #, expiration, billing address</li>
+                        <li>Bank Account: Enter bank name, routing + account #, account type</li>
+                    </ul>
+                </li>
+                <li>Ask if billing address matches service address</li>
+                <li>Confirm and click <b>Save Payment Method</b></li>
+            </ol>
+
+            <h2>Removing a Payment Method</h2>
+            <ul>
+                <li>Navigate to customer → "Billing" tab</li>
+                <li>Identify correct method using last 4 digits (confirm with customer)</li>
+                <li>Select payment method → Click <b>Remove Account</b> in top right</li>
+                <li>Confirm removal</li>
+            </ul>
+
+            <h2>Secure Pause Protocol</h2>
+            <ul>
+                <li>Click red lock button in Genesys during billing info collection</li>
+                <li>Pauses audio recording to protect customer data</li>
+                <li>Audio will be excluded from playback and review</li>
+                <li>Applies ONLY during billing information gathering</li>
+                <li>Available on inbound calls and outbound calls from "Interactions" tab</li>
+            </ul>
+
+            <h2>Agent Reminders</h2>
+            <ul>
+                <li>Never collect payment info without using Secure Pause</li>
+                <li>Ask for billing/service address confirmation</li>
+                <li>Document any payment updates in notes</li>
+                <li>Do NOT store billing info outside PestRoutes</li>
+                <li>Always confirm successful save before ending call</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="sidebar.js"></script>
+</body>
+
+</html>

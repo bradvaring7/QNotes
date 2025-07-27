@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Processing - QNotes</title>
+    <link rel="stylesheet" href="../css/styles-notes.css">
+</head>
+
+<body>
+    <!-- Sidebar will be injected here -->
+
+    <div class="main">
+        <div class="main-header">
+            <h1>Payment Processing</h1>
+            <p class="category-line">
+                <a href="index.html">BILLING</a> > Payment Processing
+            </p>
+        </div>
+
+        <div class="main-content">
+            <h2>Method 1: Card on File</h2>
+            <p>Used when customer wants to charge the balance to a card already saved in PestRoutes</p>
+            
+            <ol>
+                <li>Open Customer Card → go to "Invoices" tab</li>
+                <li>Click <b>+ Add Payment</b></li>
+                <li>Select payment type → choose <b>Card</b></li>
+                <li>Confirm selected card (e.g., Visa ****7402)</li>
+                <li>Enter amount into both top and confirmation boxes</li>
+                <li>Click <b>Charge Card</b></li>
+            </ol>
+
+            <h2>Method 2: Single Use Card</h2>
+            <p>Used when customer wants to use a one-time card not stored on account</p>
+            
+            <ol>
+                <li>Open Customer Card → go to "Invoices" tab</li>
+                <li>Click <b>+ Add Payment</b></li>
+                <li>Select payment type → choose <b>Card</b></li>
+                <li>Select <b>Single Use Card</b></li>
+                <li>Enter amount into both top and confirmation boxes</li>
+                <li>Enter card details:
+                    <ul>
+                        <li>Card number</li>
+                        <li>Expiration date (MM/YY)</li>
+                        <li>CVV</li>
+                    </ul>
+                </li>
+                <li>Click <b>Charge Single Card</b></li>
+            </ol>
+
+            <h2>General Notes</h2>
+            <ul>
+                <li>Payment recorded under selected invoice with timestamp</li>
+                <li>"Success!" message will appear if charge is submitted for settlement</li>
+                <li>Ensure invoice is linked correctly before charging</li>
+                <li>Double-check card details and amount entry for accuracy</li>
+                <li>Use Secure Pause during payment info collection if customer is providing over the phone</li>
+            </ul>
+
+            <h2>Failed Payment Flags</h2>
+            <ul>
+                <li>Gateway Rejected (e.g. AVS mismatch)</li>
+                <li>Setup Error – Card</li>
+                <li>Collections Agency Payment</li>
+                <li>Snail Mail (typically mailed checks; not real-time)</li>
+            </ul>
+
+            <h2>Agent Reminders</h2>
+            <ul>
+                <li>Always verify correct invoice before applying payment</li>
+                <li>Confirm last 4 digits of card with customer for validation</li>
+                <li>If customer disputes a payment → escalate to Billing Support or TL</li>
+                <li>Document payment and method used in account notes</li>
+                <li>Never enter card info without Secure Pause if on call</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="sidebar.js"></script>
+</body>
+
+</html>

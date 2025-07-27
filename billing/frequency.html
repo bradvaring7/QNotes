@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Frequency - QNotes</title>
+    <link rel="stylesheet" href="../css/styles-notes.css">
+</head>
+
+<body>
+    <!-- Sidebar will be injected here -->
+
+    <div class="main">
+        <div class="main-header">
+            <h1>Billing Frequency</h1>
+            <p class="category-line">
+                <a href="index.html">BILLING</a> > Billing Frequency
+            </p>
+        </div>
+        
+        <div class="main-content">
+            <h2>Overview</h2>
+            <ul>
+                <li>Determines how and when customers are charged for service</li>
+                <li>Influences billing cadence, scheduling, and customer experience</li>
+                <li>Primary billing types: Monthly, After Each Completed Service, Paid in Full (deprecated)</li>
+            </ul>
+
+            <h2>Frequency Types</h2>
+            <h3>Monthly Billing</h3>
+            <ul>
+                <li>Customer charged same date each month</li>
+                <li>Total annual cost split into monthly installments</li>
+                <li>Most common option</li>
+                <li>Once active, cannot convert to "After Each Completed Service"</li>
+                <li>Set via: Subscriptions tab → "Next Billing"</li>
+            </ul>
+
+            <h3>After Each Completed Service</h3>
+            <ul>
+                <li>Charges issued only when pro marks service complete</li>
+                <li>Risk: Accidental charge if service marked prematurely</li>
+                <li>TL/Manager approval required for refunds or invoice application</li>
+                <li>Set via: Billing tab → "Preferred Billing Date"</li>
+            </ul>
+
+            <h3>Paid in Full</h3>
+            <ul>
+                <li>❌ No longer offers 5% discount as of May 2025</li>
+                <li>Any discount must be built into signed price</li>
+                <li>Do not offer manual discount for full prepayment</li>
+            </ul>
+
+            <h2>Initial Fee Logic</h2>
+            <ul>
+                <li>One-time onboarding charge after agreement or initial service</li>
+                <li>Visible in Subscriptions tab and first invoice</li>
+                <li><b>Triggers:</b>
+                    <ul>
+                        <li>Agreement signed</li>
+                        <li>Service completed</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>$39 Pre-Charge (Inside Sales Only)</h2>
+            <ul>
+                <li>Confirms valid payment method</li>
+                <li>Added as account credit toward initial invoice</li>
+                <li>Refundable if service is canceled</li>
+                <li>May be applied to future service for same customer</li>
+            </ul>
+
+            <h2>Billing Date Adjustment</h2>
+            <ul>
+                <li>Agents may change billing due date without escalation</li>
+                <li>Autopay charges on chosen date</li>
+                <li><b>Adjust in:</b>
+                    <ul>
+                        <li>Monthly Billing → Subscriptions tab → "Next Billing"</li>
+                        <li>After Each Completed Service → Billing tab → "Preferred Billing Date"</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>Agent Reminders</h2>
+            <ul>
+                <li>Reinforce monthly billing value: manageable installments, pest-free guarantee, re-services included</li>
+                <li>Confirm billing frequency before quoting or rescheduling</li>
+                <li>Never promise Paid in Full discount manually</li>
+                <li>Document all adjustments in PestRoutes with approver noted</li>
+                <li>Escalate accidental charges if disputed or unclear</li>
+            </ul>
+
+            <h2>Edge Cases</h2>
+            <ul>
+                <li>Legacy accounts may have nonstandard billing logic or fields</li>
+                <li>Blank frequency or symbols (e.g. "£") → escalate to Scheduling</li>
+                <li>Frequency field may influence technician dispatch—ensure accuracy</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="sidebar.js"></script>
+</body>
+
+</html>
