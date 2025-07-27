@@ -1,0 +1,62 @@
+COLLECTIONS  
+💳 BILLING | KBs: ARM Solutions / Collections Lifecycle
+
+== OVERVIEW ==
+• ARM Solutions is our third-party collections partner  
+• Customers contacted via email, text, and calls based on account age  
+• Direct payment to Greenix preferred to avoid ARM fees
+
+== COLLECTIONS LIFECYCLE BY AGE ==
+• 0–4 Days: No contact  
+• 5–14 Days:
+  - No contact yet  
+• 15–29 Days:
+  - Weekly “soft prompt” text
+  - Slightly forward texts 2x/week
+  - Emails 3x/week
+  - No calls yet
+• 30–59 Days:
+  - Aggressive texts 2x/week offering 20% discount
+  - Emails 3x/week
+  - Calls begin on Day 30, 2x/week
+• 60–83 Days:
+  - ARM begins calls (up to 5x/week)
+  - Email and text pace continues
+• 84–111 Days (Unpaid Cancels):
+  - Daily text offers 30% discount + risk of cancellation
+  - Daily email and call
+  - Final warning letter sent
+• 105–179 Days:
+  - Every Monday: Cancel accounts >105 days overdue
+  - ARM flat-fee treatment begins post-cancel
+  - Daily 30% off offer for paid-in-full resolution
+• 180+ Days:
+  - Balance written off
+  - ARM contingency efforts continue until deemed futile
+
+== DISCOUNT PROTOCOL ==
+• Promo offers vary by stage: 10%, 20%, or 30% off  
+• Full balance payment required to qualify  
+• Apply coupon:  
+  - Code: `Promotional`  
+  - Description: `Collections Promo`  
+• Confirm with Supervisor if unclear or limit exceeded
+
+== TEXT TEMPLATES ==
+• 15–29 Days:
+  - “OOPS! Last payment of $___ didn’t work…”
+• 30–59 Days:
+  - “Your account has a balance of $___ outstanding for ___ days…”
+• 60–97 Days:
+  - “Your account may be deactivated. We can offer 10% off today…”
+• 84–111 Days:
+  - “Your account is at risk of cancellation… We’ll waive 20% if paid by Monday.”
+• 111–179 Days:
+  - “URGENT! Services stopped. Call now for 30% off your balance…”
+
+== AGENT ACTIONS ==
+• Recommend payment via Greenix portal or CS line  
+• Apply discount only with full payment  
+• Record coupon and payment in PestRoutes  
+• Confirm outreach history and escalation stage if disputed  
+• Escalate complex cases or coupon limits to Supervisor

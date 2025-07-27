@@ -1,0 +1,17 @@
+CHECK PAYMENTS  
+⬆️ BILLING | KB: Checks
+
+== PAYMENT TIMING ==
+• Checks may take up to 2 weeks to deposit  
+• If paid via bank’s bill pay, money may leave customer's account up to a week before we receive the check  
+• Lockbox service handled by JP Morgan Chase (customer may see this on bank statement)  
+
+== MAILING ADDRESS ==
+• PO BOX 734929  
+• Chicago, IL 60673  
+
+== AGENT REMINDERS ==
+• Confirm mailing timeline when customer checks payment status  
+• Mention JP Morgan Chase if customer is confused by deposit label  
+• Set expectation: Processing delays may occur even if funds have cleared on customer’s end  
+• Submit Workday ticket (Check Payment Status) if customer believes check was lost

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>QNotes Viewer</title>
+  <link rel="stylesheet" href="/css/styles-notes.css" />
+  <style>
+    qnote {
+      display: block;
+      white-space: pre-wrap;
+      font-family: system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      padding: 1.5rem;
+      border-radius: 8px;
+      line-height: 1.6;
+    }
+
+    qnote::before {
+      content: "📄 Loaded Note Block";
+      font-weight: bold;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    :root {
+      --bg: #121212;
+      --fg: #f0f0f0;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #ffffff;
+        --fg: #202020;
+      }
+    }
+  </style>
+</head>
+<body>
+  <qnote>
+CANCELLATION REQUESTS  
+⬆️ BILLING | KB: Cancel
+
+== EMPATHY LINES ==
+• "I understand why you're looking to make changes. I'd feel the same way if I were paying for something that didn’t feel effective."  
+• "I'm sorry if you haven’t seen results yet—I’ll do everything I can on this call to make it right."  
+• "Thanks for sharing your price concerns. Everything feels more expensive lately and I get how heavy that is."  
+• "Sounds like you just want to get your house taken care of—I'm sorry scheduling has gotten in the way."  
+• "Thank you for reaching out. I’m documenting this to ensure the right teams are looped in. I’m so sorry for the experience you had."
+
+== DISCOVERY QUESTIONS ==
+• What pests are you still seeing?  
+• How long have you been seeing them?  
+• Have you heard of or used our free reservices yet?  
+• Are there ways our treatments could offer more value for you?  
+• Are you exploring other options, or just looking to manage expenses?  
+• What were your expectations for our service timing?  
+• What days work best for future appointments?  
+• Is this the first time this kind of scheduling issue has happened?  
+• Can you explain what happened? Was this on your last visit or phone call?
+
+== VALUE SOLUTIONS ==
+• Reservice: "I'd love to send someone to inspect and spot treat trouble areas. This is completely free as part of your plan."  
+• VIP Service: "I’ll schedule a VIP visit with one of our lead techs for a free, in-depth treatment and inspection."  
+• Red/Yellow Note: "I'll flag your account with preferences so future visits match your needs exactly."  
+• Push Appointment: "I can push your appointment to a day that works better while keeping your protection active."  
+• Add a Coupon: "Your seasonal treatment is vital—we’ll offer a discount on your next bill so you can maintain that barrier."
+
+== AGENT REMINDERS ==
+• Always empathize before resolving  
+• Ask two or more diagnostic questions  
+• Offer relevant solutions and explain *why*  
+• Document fully if the issue relates to employee interaction
+  </qnote>
+</body>
+</html>

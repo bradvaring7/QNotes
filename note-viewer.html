@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>QNotes Viewer</title>
+  <link rel="stylesheet" href="css/styles-notes.css" />
+  <style>
+    qnote {
+      display: block;
+      white-space: pre-wrap;
+      font-family: system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      padding: 1.5rem;
+      border-radius: 8px;
+      line-height: 1.6;
+    }
+
+    qnote::before {
+      content: "📄 Loaded Note Block";
+      font-weight: bold;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    :root {
+      --bg: #121212;
+      --fg: #f0f0f0;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #ffffff;
+        --fg: #202020;
+      }
+    }
+  </style>
+</head>
+<body>
+  <qnote>
+Paste your raw note content here—no markup, just clean text.
+Sections like == OVERVIEW ==, bullets with • or -, emojis… it'll all render clearly.
+  </qnote>
+</body>
+</html>

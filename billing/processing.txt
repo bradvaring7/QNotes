@@ -1,0 +1,46 @@
+PAYMENT PROCESSING  
+⬆️ BILLING | KB: How to Process a Payment
+
+== METHOD 1: CARD ON FILE ==
+Used when customer wants to charge the balance to a card already saved in PestRoutes
+
+• STEP 1: Open Customer Card → go to "Invoices" tab  
+• STEP 2: Click **+ Add Payment**  
+• STEP 3: Select payment type → choose **Card**  
+• STEP 4: Confirm selected card (e.g., Visa ****7402)  
+• STEP 5: Enter amount into both top and confirmation boxes  
+• STEP 6: Click **Charge Card**
+
+== METHOD 2: SINGLE USE CARD ==
+Used when customer wants to use a one-time card not stored on account
+
+• STEP 1: Open Customer Card → go to "Invoices" tab  
+• STEP 2: Click **+ Add Payment**  
+• STEP 3: Select payment type → choose **Card**  
+• STEP 4: Select **Single Use Card**  
+• STEP 5: Enter amount into both top and confirmation boxes  
+• STEP 6: Enter card details:  
+  - Card number  
+  - Expiration date (MM/YY)  
+  - CVV  
+• STEP 7: Click **Charge Single Card**
+
+== GENERAL NOTES ==
+• Payment recorded under selected invoice with timestamp  
+• “Success!” message will appear if charge is submitted for settlement  
+• Ensure invoice is linked correctly before charging  
+• Double-check card details and amount entry for accuracy  
+• Use Secure Pause during payment info collection if customer is providing over the phone
+
+== FAILED PAYMENT FLAGS ==
+• Gateway Rejected (e.g. AVS mismatch)  
+• Setup Error – Card  
+• Collections Agency Payment  
+• Snail Mail (typically mailed checks; not real-time)
+
+== AGENT REMINDERS ==
+• Always verify correct invoice before applying payment  
+• Confirm last 4 digits of card with customer for validation  
+• If customer disputes a payment → escalate to Billing Support or TL  
+• Document payment and method used in account notes  
+• Never enter card info without Secure Pause if on call

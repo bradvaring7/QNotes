@@ -1,0 +1,49 @@
+PAYMENT METHOD & SECURE PAUSE  
+⬆️ BILLING | KB: Adding a Payment Method & Removing a Payment Method & Types of Payment Methods & Secure Pause
+
+== ACCEPTED PAYMENT METHODS ==
+• Credit/Debit Card  
+  → Visa, MasterCard, Discover, American Express  
+• Bank Account  
+  → Account + Routing Number  
+• Mailed Check  
+  → Greenix Holdings LLC  
+     PO BOX 734929  
+     Chicago, IL 60673  
+• Customer Portal  
+  → Customers may add methods or pay via portal login
+
+== NOT ACCEPTED ==
+• Cash (mailed or handed)  
+• Payments to Service Professionals  
+• Prepaid cards (e.g., gift cards, money orders, Vanilla cards)
+
+== ADDING A PAYMENT METHOD ==
+1. Use **Secure Pause** before collecting sensitive billing info  
+2. Go to customer card → "Billing" tab  
+3. Click **+ Add Payment Method**  
+4. Choose method:  
+   → Credit Card: Fill out card #, expiration, billing address  
+   → Bank Account: Enter bank name, routing + account #, account type  
+5. Ask if billing address matches service address  
+6. Confirm and click **Save Payment Method**
+
+== REMOVING A PAYMENT METHOD ==
+• Navigate to customer → "Billing" tab  
+• Identify correct method using last 4 digits (confirm with customer)  
+• Select payment method → Click **Remove Account** in top right  
+• Confirm removal
+
+== SECURE PAUSE PROTOCOL ==
+• Click red lock button in Genesys during billing info collection  
+• Pauses audio recording to protect customer data  
+• Audio will be excluded from playback and review  
+• Applies ONLY during billing information gathering  
+• Available on inbound calls and outbound calls from “Interactions” tab
+
+== AGENT REMINDERS ==
+• Never collect payment info without using Secure Pause  
+• Ask for billing/service address confirmation  
+• Document any payment updates in notes  
+• Do NOT store billing info outside PestRoutes  
+• Always confirm successful save before ending call

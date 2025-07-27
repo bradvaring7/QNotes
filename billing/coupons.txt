@@ -1,0 +1,47 @@
+COUPONS  
+🧮 BILLING | KBs: How to Add Coupons + Types of Coupons
+
+== DAILY LIMITS ==
+• Agents may apply up to $20/day without approval  
+• More than $20 → get Supervisor/Manager permission first
+
+== EFFECT ON ACCOUNT ==
+• Coupon = Credit applied to account  
+• If balance exists → reduces it  
+• If no balance → sits as credit (green) until next charge  
+• Can restrict to a specific subscription via "Limited to Subscription"
+
+== APPLYING A COUPON ==
+1. Go to Invoices Tab → Click “Add Payment”  
+2. Select “Coupon / Credit”  
+3. Fill out fields:
+   - 💵 Payment Amount + Confirm Amount = same value  
+   - 🔤 Coupon Code + Description = match code list below  
+   - ✍️ Brief reason + any approval details  
+4. Click “Record Coupon” → Should see “Coupon Applied Successfully!”
+
+== REQUIRED FIELDS ==
+• Payment Amount / Confirm Amount  
+• Coupon Code + Description  
+• Customer Payment Notes → include why you're adding it + any approvals
+
+== APPROVED COUPON CODES ==
+• Billing → System Error  
+• Goodwill → Field  
+• Goodwill → Office  
+• Scheduling → Off Cycle  
+• Promotional → Autopay  
+• Promotional → Referral  
+• Promotional → Collections Promo  
+
+== ACCOUNTING COUPONS ==
+• Refund → Refund balance after charge reversal  
+• ARM → Coupon added when payment made via ARM  
+• Unsuccessful Chargeback → Greenix wins dispute, credit re-added  
+• Write-Off → Cancels debt after 100–180 days (customer still owes it)
+
+== AGENT REMINDERS ==
+• Add notes with coupon context + any approvals  
+• Use correct code/description pairs—7 approved only  
+• Limit coupons to subscriptions when applicable  
+• Credit shows immediately after applying  
