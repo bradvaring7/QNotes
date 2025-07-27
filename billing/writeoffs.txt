@@ -1,37 +1,31 @@
 PAPER BILLING  
 ⬆️ BILLING | KB: Paper Billing
 
-== WHAT IS PAPER BILLING ==
-• Customer pays by mailed check instead of card or bank account  
-• Triggered by agent selection in PestRoutes + removal from auto-pay  
-• Used when customer refuses portal payments or prefers physical bills
 
-== ENABLING / DISABLING PAPER BILLING ==
-• STEP 1: Open Customer Card → Go to **Info** tab  
-• STEP 2: Check box **"Prefers Paper"** (bottom-left) → Save changes  
-• STEP 3: Go to **Billing** tab → Verify current Auto-Pay setting  
-• STEP 4: If listed as "CC", click → select **No Auto-Pay**  
-• STEP 5: Save and exit
+You may see some accounts that have been cancelled by Greenix. When a customer is past due for their bill with us for too long, (any time from 100-180 days) a member of our billing team will cancel the customer's account and write-off the balance that was left. This article goes through how to know which accounts are Write-offs, and how to properly handle cases when a customer calls in to pay their bill and may want to re-activate their account.
 
-== CUSTOMER EXPERIENCE ==
-• Customer receives both paper and email invoice (if email is on file)  
-• Can still pay online via link or account number  
-• Mailed check should go to Lockbox address listed on paper invoice  
-• Internal processing:  
-  - Lockbox checks entered next day after arrival  
-  - Checks hand-delivered to office entered same day
 
-== IF CHECK IS LOST / BANK MAIL SITUATIONS ==
-• Customer must provide picture or bank proof if check is missing  
-• Checks sent via bank may show as “withdrawn” before arriving  
-• Explain possible mail delay even after withdrawal shows in bank
+== You will know this is a Write-Off because: ==
+- The Account is Frozen
+- The subscriptions cancellation reason will be “Unpaid Balance”
+- The amount the customer owed, will be couponed out. This coupon will be labeled “Write-Off” 
 
-== AGENT REMINDERS ==
-• Always confirm Auto-Pay has been disabled after enabling Paper Billing  
-• Do not collect paper billing without checking customer preference  
-• Enter note confirming Paper Billing setup, including customer request date  
-• If Lockbox issues arise, escalate with check details or photo evidence  
-• Mail address:  
-  → Greenix Holdings LLC  
-     PO BOX 734929  
-     Chicago, IL 60673
+
+== Cancellation reason “Unpaid Balance” ==
+insert image here ../assets/billing-unpaidbalance.jpg (size will need much smaller than the actual file image dimensions of course and should shrink/grow relative to the page size)
+Example of a Coupon labeled “WriteOff” on a frozen account
+
+== What if a customer wants to pay their bill? ==
+Even if an account has been cancelled, and a customer wants to pay their balance or the amount that was written off you can definitely help them out with that! 
+
+1. Charge the amount - With Customer approval, review how much they owed. Even if they do not have a balance, you will need to charge them the amount that was written off on their account in order to re-activate it. 
+
+You will know how much they owed by looking at the amount that was in the write-off coupon. (for ex. above we would charge the customer $297.00) If the customer asks to make partial payments they can do so, but none of the steps below will be applicable until they paid their debt in full.
+
+*If the Customer doesn't wish to re-activate their account, you are done there! Leave good notes on the account. If the Customer wishes to re-activate their account, you can do so and go to the next step if they have followed all of the steps above.*
+
+2. Re-Activate the Account - If the customer wishes to continue services with us, if they have a payment method on file, and are willing to be on Autopay, they may continue services with us. 
+- You must 1st get permission from a Supervisor that you can re-activate the Customers account. 
+- To activate, toggle “Active” in the Subscription. Make notes on the account you have done so. 
+
+3. Schedule if needed - If the customer would like to schedule an appointment, you may schedule one for them if they are due for one. If they are past due, you may also schedule one on the soonest available date. 

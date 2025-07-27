@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8" />
   <title>QNotes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/styles-notes.css">
 </head>
+
 <body>
-  <div class="sidebar">
-    <img src="assets/Picture2.png" alt="QNotes Logo" class="logo">
-    <h2>Categories</h2>
-    <a class="sidebar-link" href="billing/index.html">Billing</a>
-    <a class="sidebar-link" href="value/index.html">Building Value</a>
-  </div>
+  <!-- Sidebar will be injected here -->
+  
   <div class="main">
     <h1>QNotes</h1>
-    <p>Select Category</p>
+    <p class="category-line">
+      <a href="index.html">HOME</a>
+    </p>
+    
+    <h2>Categories</h2>
+    <p>Welcome to QNotes. Select a category from the sidebar to get started.</p>
+    
+    <h3>Available Categories:</h3>
+    <ul>
+      <li><a href="billing/index.html">Billing, Cancel</a> - Information about billing processes and cancellations</li>
+      <li><a href="value/index.html">Building Value</a> - Information about building customer value</li>
+      <li><a href="bigbook/index.html">Big Book</a> - Comprehensive guide to pests and bugs</li>
+    </ul>
   </div>
+
+  <script src="js/sidebar-simple.js"></script>
 </body>
+
 </html>

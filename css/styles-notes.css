@@ -1,14 +1,13 @@
 /* style-notes.css */
 
 /* Reset and base layout */
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-  overflow-x: hidden;
+  overflow: hidden;
   font-family: 'Roboto', sans-serif;
   font-size: 14pt;
   line-height: 1.3;
@@ -16,7 +15,7 @@ body {
   color: #222;
   display: flex;
   height: 100vh;
-  min-width: 350px;
+  min-width: 300px; /* Much smaller minimum */
 }
 
 * {
@@ -25,43 +24,36 @@ body {
 
 /* Sidebar layout */
 .sidebar {
-  width: 200px;
+  width: 250px;
   background: #f4f4f4;
-  padding: 1rem;
+  padding: 0;
   border-right: 1px solid #ccc;
   transition: all 0.3s ease;
   position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100vh;
+  box-sizing: border-box;
 }
 
-/* Main specific h1 styling */
-.main h1 {
-  font-size: 1.5rem;
-  /* Smaller than main h1 */
-  margin-bottom: 0.8rem;
-  margin-top: 1rem;
-  border-bottom: 1px solid #ccc;
-  /* Remove border if you don't want it */
-  padding-bottom: 0;
-  line-height: 1.3;
-  color: #333;
+.sidebar-content {
+  padding: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
 }
 
-/* Logo styling */
 .logo {
   display: block;
   width: 130px;
   height: auto;
   margin: 0;
-  margin-top: 0px;
-  /* Small top margin */
-  margin-left: 0px;
-  /* Small left margin */
+  margin-top: 5px;
 }
-
 
 .sidebar.collapsed {
   width: 50px;
   padding: 1rem 0.5rem;
+  overflow: hidden;
 }
 
 .sidebar.collapsed .sidebar-content {
@@ -72,7 +64,6 @@ body {
   transform: rotate(180deg);
 }
 
-/* Toggle button */
 .toggle-btn {
   position: absolute;
   top: 10px;
@@ -92,28 +83,157 @@ body {
   justify-content: center;
   padding: 0;
   line-height: 1.0rem;
-  padding-block-start: 0;
-  padding-block-end: 0;
-  padding-inline: 2px;
+  z-index: 10;
 }
 
-
-
 .sidebar h2 {
-  font-size: 16pt;
-  margin-top: 2rem;
+  font-size: 15pt;
+  margin-top: 1rem;
   margin-bottom: 0.6rem;
   color: #333;
+  margin-left: 0;
+}
+
+/* Dropdown functionality */
+.dropdown-section {
+    margin-bottom: 1rem;
+}
+
+.dropdown-header {
+    font-size: 15pt;
+    margin-top: 1.2rem;
+    margin-bottom: 0.6rem;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    padding-left: 6px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.2s;
+    margin-left: 0;
+    line-height: 0.9;
+}
+
+.dropdown-header:hover {
+    background-color: #e9e9e9;
+}
+
+.dropdown-arrow {
+    font-size: 12pt;
+    transition: transform 0.2s;
+}
+
+.dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.dropdown-content:not(.collapsed) {
+    max-height: 1000px;
+    overflow: visible;
+}
+
+.dropdown-content .sidebar-link {
+    padding-left: 6px;
 }
 
 /* Main content area */
 .main {
   flex: 1;
-  padding: 0.75rem 1rem;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: auto;
+  height: 100vh;
+  min-width: 0;
+  width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sticky header container */
+.main-header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 5;
+  padding: 0.75rem 1rem 0.5rem 1rem;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Scrollable content area */
+.main-content {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  padding-bottom: 2rem;
   overflow-y: auto;
 }
 
-/* Links */
+/* Adjust h1 and category line for sticky header */
+.main-header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+  color: #333;
+}
+
+.main-header .category-line {
+  font-size: 14pt;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 4px 4px;
+  border-bottom: none;
+}
+
+/* For pages without sticky header structure (like billing/index.html) - MORE SPECIFIC */
+.main > h1:not(.main-header h1) {
+  font-size: 1.5rem !important;
+  margin: 0.5rem 0 0.8rem 0 !important; /* REDUCE top margin to move header UP */
+  padding: 0.75rem 1rem 4px 1rem !important;
+  border-bottom: 1px solid #ccc !important;
+  color: #333 !important;
+}
+
+/* Move the sidebar links RIGHT to align under the header */
+.main > a.sidebar-link {
+  padding-left: 1.2rem !important; /* INCREASE padding to move links RIGHT */
+  margin-left: 0 !important;
+}
+
+/* Add padding to main content on non-sticky pages */
+.main > h2, .main > h3, .main > p, .main > ul {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Remove the forcing rules that might be causing issues */
+.main * {
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+}
+
+/* Make specific elements more responsive */
+.main h1, .main h2, .main h3 {
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.main p, .main li {
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Sidebar links */
 .sidebar-link {
   display: block;
   margin-bottom: 8px;
@@ -122,29 +242,15 @@ body {
   padding-left: 6px;
   border-radius: 4px;
   transition: background-color 0.2s;
-  font-size: 14pt;
+  font-size: 13pt;
 }
 
-.link:hover {
+.sidebar-link:hover {
   background-color: #e0e0e0;
   color: #222;
 }
 
-/* Layout wrapper */
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 1rem 20px;
-}
-
 /* Content elements */
-h1 {
-  font-size: 26pt;
-  margin-bottom: 4px;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 4px;
-}
-
 h2 {
   font-size: 18pt;
   margin-bottom: 0.2rem;
@@ -174,9 +280,9 @@ p {
 .category-line {
   font-size: 14pt;
   margin-bottom: 1rem;
-  margin-top: 0;
+  margin-top: 0; /* Ensure no top margin */
   padding: 4px 4px;
-  border-bottom: 1px solid #eee;
+  border-bottom: none; /* Removed the line under BILLING */
 }
 
 .category-line a {
@@ -189,7 +295,6 @@ p {
   text-decoration: underline;
 }
 
-/* Lists */
 ul {
   margin-bottom: 0.8rem;
   margin-top: 0.4rem;
@@ -202,47 +307,83 @@ li {
   color: #444;
 }
 
-/* Emphasized text */
 em {
   font-style: italic;
   color: #333;
   font-weight: 500;
 }
 
-/* Simple layout (no sidebar) */
-.simple-layout {
-  display: block !important;
-  height: auto !important;
+/* Add margin to last elements for better bottom spacing */
+.main > *:last-child {
+  margin-bottom: 2rem;
 }
 
-.full-width {
-  width: 100% !important;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
+/* Image styling for billing pages */
+.image-container {
+  margin: 1rem 0;
+  text-align: left;
+  padding-left: 1.0rem; /* Add left padding to match paragraphs */
 }
 
-.top-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 0 1rem 0;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid #eee;
-}
-
-.back-link,
-.home-link {
-  text-decoration: none;
-  color: #007acc;
-  font-weight: 500;
-  padding: 8px 16px;
+.billing-image {
+  max-width: 60%; /* Reduced from 100% to 75% */
+  height: auto;
+  border: 1px solid #ddd;
   border-radius: 4px;
-  transition: background-color 0.2s;
+
+  margin-bottom: 0.5rem;
+  display: block; /* Ensures proper alignment */
 }
 
-.back-link:hover,
-.home-link:hover {
-  background-color: #f0f8ff;
-  text-decoration: none;
+.image-caption {
+  font-style: italic;
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+  text-align: left; /* Changed from center to left */
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .main {
+    font-size: 13pt;
+  }
+  
+  h2 {
+    padding-left: 0.1rem;
+  }
+  
+  h3 {
+    padding-left: 0.4rem;
+  }
+  
+  p {
+    padding-left: 0.5rem;
+  }
+  
+  ul {
+    padding-left: 1.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .main {
+    font-size: 12pt;
+  }
+  
+  h2 {
+    padding-left: 0;
+  }
+  
+  h3 {
+    padding-left: 0.2rem;
+  }
+  
+  p {
+    padding-left: 0.3rem;
+  }
+  
+  ul {
+    padding-left: 1rem;
+  }
 }
