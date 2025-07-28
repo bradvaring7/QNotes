@@ -390,6 +390,7 @@ em {
   text-align: left; /* Changed from center to left */
 }
 
+
 /* Responsive adjustments */
 @media (max-width: 900px) {
   .main { font-size: 13pt; }
@@ -427,4 +428,23 @@ em {
   background-color: rgba(255, 255, 255, 0.4) !important;
   backdrop-filter: blur(6px) !important;
   border-bottom: 1px solid rgba(37, 103, 66, 0.3) !important;
+}
+
+@media (max-width: 1024px) {
+  html, body {
+    height: 100vh !important;
+    overflow: hidden !important;
+  }
+
+  .main {
+    height: 100vh !important;
+    overflow: hidden !important;
+  }
+
+  .main-content {
+    max-height: calc(100vh - 60px) !important;
+    overflow-y: auto !important;
+    padding-bottom: 3rem !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
 }
