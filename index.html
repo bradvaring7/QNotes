@@ -1,25 +1,84 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>QNotes</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/styles-notes.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navigation Bar</title>
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
-
 <body>
-  <!-- Sidebar will be injected here -->
-  
-  <div class="main">
-    <h1>QNotes</h1>
-    <p>Welcome to QNotes</p>
-    <p>Select a category</p>
-    
-  
+<nav class="navbar">
+  <div class="navbar-logo">
+    <img src="assets/00logo.png" alt="Logo">
   </div>
+  <ul class="navbar-links">
+    <li><a href="#home">HOME</a></li>
+    <li><a href="#general">GENERAL</a></li>
+    <li><a href="#billing">BILLING</a></li>
+    <li><a href="#cx">CS</a></li>
+    <li><a href="#services">SERVICES</a></li>
+    <li><a href="#bigbook">BIG BOOK</a></li>
+  </ul>
+  <div class="navbar-toggle" id="mobile-menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+</nav>
 
-  <script src="js/sidebar-simple.js"></script>
+<!-- Placeholder Content -->
+<div id="home" class="section"><h2>HOME</h2>
+
+
+
+
+</div>
+<div id="general" class="section"><h2>GENERAL</h2>
+
+
+
+</div>
+<div id="billing" class="section"><h2>BILLING</h2>
+  <ul class="section-links">
+    <li><a href="/billing/tickets.html">Workday Tickets</a></li>
+    <li><a href="/billing/checks.html">Checks Payments</a></li>
+    <li><a href="/billing/frequency.html">Billing Frequency</a></li>
+    <li><a href="/billing/coupons.html">Coupons</a></li>
+    <li><a href="/billing/methods.html">Payment Methods</a></li>
+    <li><a href="/billing/processing.html">Payment Processing</a></li>
+    <li><a href="/billing/paper.html">Paper Billing</a></li>
+    <li><a href="/billing/writeoffs.html">Write-Offs</a></li>
+    <li><a href="/billing/collections.html">ARM Collections</a></li>
+    <li><a href="/billing/price.html">Price Increase</a></li>
+    <li><a href="/billing/invoices.html">Send Invoices</a></li>
+    <li><a href="/billing/stop.html">Stop Calls/Text</a></li>
+    <li><a href="/billing/autopay.html">Autopay</a></li>
+    <li><a href="/billing/dispute_refunds.html">Disputes/Requests</a></li>
+    <li><a href="/billing/declines.html">Decline Codes</a></li>
+  </ul>
+</div>
+<div id="cx" class="section"><h2>CS</h2>
+<p>Cancel Requests</p>
+
+
+</div>
+<div id="services" class="section"><h2>SERVICES</h2>
+
+
+
+</div>
+<div id="bigbook" class="section"><h2>BIG BOOK</h2>
+
+
+
+
+</div>
+
+
+
 </body>
 
+
+
+<script src="script.js"></script>
 </html>

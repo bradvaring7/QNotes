@@ -5,30 +5,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Checks Payments - QNotes</title>
-  <link rel="stylesheet" href="../css/styles-notes.css">
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
-  <!-- Sidebar will be injected here -->
-
-  <div class="main">
-    <div class="main-header">
-      <h1>Checks Payments💸</h1>
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <img src="/assets/00logo.png" alt="Logo">
     </div>
-
-    <div class="main-content">
-      <h2>Address to Send Checks</h2>
-      <p>PO Box 734929, Chicago, IL 60673</p>
-      <h2>Check Information</h2>
-      <ul>
-        <li>It can take up to 2 weeks for a check to be deposited.</li>
-        <li>JP Morgan Chase will appear as the payee name on the check when it is deposited.</li>
-        <li>If paying through bill pay service, money may be withdrawn a week before the check is received.</li>
-      </ul>
+    <ul class="navbar-links">
+      <li><a href="/index.html#home" target="_self">HOME</a></li>
+      <li><a href="/index.html#general" target="_self">GENERAL</a></li>
+      <li><a href="/index.html#billing" target="_self">BILLING</a></li>
+      <li><a href="/index.html#cx" target="_self">CS</a></li>
+      <li><a href="/index.html#services" target="_self">SERVICES</a></li>
+      <li><a href="/index.html#bigbook" target="_self">BIG BOOK</a></li>
+    </ul>
+    <div class="navbar-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </div>
-  </div>
+  </nav>
 
-  <script src="../js/sidebar-simple.js"></script>
+  <main class="note-card">
+    <h2>Checks Payments</h2>
+    <p>Instructions and info for handling check payments.</p>
+    <ul>
+      <li>Address to send checks: PO Box 734929, Chicago, IL 60673</li>
+      <li>Checks may take up to 2 weeks to process.</li>
+      <li>Contact billing for lost or delayed checks.</li>
+    </ul>
+    <a href="/index.html#billing"
+      class="back-link">&larr; Back to Billing</a>
+  </main>
+
+  <script src="/script.js"></script>
 </body>
 
 </html>
